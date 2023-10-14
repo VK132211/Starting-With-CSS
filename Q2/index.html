@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Paragraphs</title>
+    <style>
+      /* BEM Naming Convention */
+      /* 
+      .paragraph-container is the block that represents the container for the paragraphs.
+      .paragraph is the element that represents individual paragraphs within the container.
+.     .important-paragraph, .highlighted-paragraph, .quote-paragraph, .large-text-paragraph, .italic-paragraph, and .red-text-paragraph are modifiers that represent additional styling for specific paragraphs.
+     */
+
+      /* Block: This represents the container for the paragraphs */
+      .paragraph-container {
+        margin: 20px;
+        padding: 10px;
+        border: 2px solid #333;
+      }
+
+      /* Element: These represent individual paragraphs within the container */
+      .paragraph-container .paragraph {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      /* Modifier: These represent additional styling for specific paragraphs */
+      .paragraph-container .important-paragraph {
+        font-weight: bold;
+        color: #ff5733;
+      }
+
+      .paragraph-container .highlighted-paragraph {
+        background-color: #ffff00;
+      }
+
+      .paragraph-container .quote-paragraph {
+        border-left: 4px solid #0077ff;
+        padding-left: 10px;
+      }
+
+      .paragraph-container .large-text-paragraph {
+        font-size: 20px;
+      }
+
+      .paragraph-container .italic-paragraph {
+        font-style: italic;
+      }
+
+      .paragraph-container .red-text-paragraph {
+        color: #ff0000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Paragraphs with unique class names -->
+    <div class="paragraph-container">
+      <p class="paragraph important-paragraph">
+        This is an important paragraph.
+      </p>
+      <p class="paragraph highlighted-paragraph">
+        This paragraph is highlighted.
+      </p>
+      <p class="paragraph quote-paragraph">
+        "To be or not to be, that is the question."
+      </p>
+      <p class="paragraph large-text-paragraph">
+        This paragraph has a larger text size.
+      </p>
+      <p class="paragraph italic-paragraph">This paragraph is italicized.</p>
+      <p class="paragraph red-text-paragraph">
+        This paragraph has red text color.
+      </p>
+    </div>
+  </body>
+</html>

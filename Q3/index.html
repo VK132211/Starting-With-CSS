@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Define a custom color palette */
+      :root {
+        --primary-bg-color: #3498db;
+        --secondary-bg-color: #e74c3c;
+        --text-color: #ffffff;
+        --input-bg-color: #f2f2f2;
+        --input-border-color: #333;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: var(--primary-bg-color);
+        color: var(--text-color);
+      }
+
+      form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: var(--secondary-bg-color);
+        border-radius: 10px;
+      }
+
+      .section-with-opacity {
+        opacity: 0.8; /* Apply opacity to the specific form section */
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        background-color: var(--input-bg-color);
+        border: 1px solid var(--input-border-color);
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        background-color: var(--primary-bg-color);
+        color: var(--text-color);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #1e87d3;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your Name"
+        required
+      />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your Email"
+        required
+      />
+
+      <!-- Apply opacity to this specific section -->
+      <div class="section-with-opacity">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Your Password"
+          required
+        />
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
